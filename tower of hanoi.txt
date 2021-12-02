@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void TowerofHanoi(int n,char s,char d,char i)
+{
+    if(n==1)
+    {
+        printf("Moving ring %d from %c to %c\n",n,s,d);
+        return;
+    }
+    else
+    {
+        TowerofHanoi(n-1,s,i,d);
+        printf("\nMoving ring %d from %c to %c\n\n",n,s,d);
+        TowerofHanoi(n-1,i,d,s);
+    }
+}
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n;
+    scanf("%d",&n);
+    TowerofHanoi(n,'A','C','B');
+    return 0;
+}
