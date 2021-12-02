@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+   long int T,n,k,a,b,s=0,i;
+    scanf("%ld",&T);
+    for(i=1;i<=T;i++)
+    {
+       scanf("%ld %ld",&n,&k);
+         s=n;
+      while(n>=k)
+      {
+         
+          a=n/k;
+          b=n%k;
+          s=s+a;
+          n=a+b;
+      }
+        
+        printf("%ld\n",s);
+    }
+    
+    
+    return 0;
+}
